@@ -1,0 +1,110 @@
+{
+  "experiment": "E1_sampling02",
+  "smoke": false,
+  "seed": 2026,
+  "data": {
+    "root": "D:\\App\\Files\\2026-低空图像语义分割赛道-训练集",
+    "image_subdir": "train/train/images",
+    "mask_subdir": "train/train/masks",
+    "label_file": "Label.txt",
+    "expected_train_count": 6996,
+    "expected_test_count": 500,
+    "image_size": 1024,
+    "split": "artifacts/split.json",
+    "manifest": "artifacts/data_manifest.json",
+    "group_csv": null,
+    "val_fraction": 0.15,
+    "test_image_dir": null,
+    "test_zip": "D:\\App\\Files\\2026-低空图像语义分割赛道-训练集\\test_1.zip",
+    "original_split": "artifacts/split.json"
+  },
+  "model": {
+    "family": "dinov2",
+    "hub_name": "dinov2_vits14",
+    "repo": "vendor/dinov2",
+    "weights": "pretrained/dinov2_vits14.pth",
+    "receipt": "pretrained/dinov2_vits14.provenance.json",
+    "patch_size": 14,
+    "feature_dim": 384,
+    "layers": [
+      2,
+      5,
+      8,
+      11
+    ],
+    "width": 64,
+    "detail_branch": true,
+    "tuning": "lora",
+    "lora_rank": 8,
+    "lora_last_blocks": 4,
+    "lora_alpha": 16,
+    "enable_spatial_adapter": true,
+    "enable_frequency_adapter": false,
+    "enable_pbseg_detail": false,
+    "adapter_layers": [
+      2,
+      3
+    ],
+    "frequency_layers": [
+      2
+    ]
+  },
+  "train": {
+    "epochs": 3,
+    "crop": 392,
+    "batch_size": 1,
+    "accumulation": 8,
+    "num_workers": 0,
+    "lr_decoder": 3e-05,
+    "lr_backbone": 3e-06,
+    "weight_decay": 0.01,
+    "warmup_updates": 30,
+    "clip_grad": 1.0,
+    "amp": true,
+    "early_stopping": 0,
+    "val_every": 1,
+    "max_updates": null,
+    "sampling_probability": 0.2,
+    "target_classes": [
+      5,
+      8,
+      3,
+      7
+    ],
+    "resize_choices": [
+      512,
+      768,
+      1024
+    ]
+  },
+  "loss": {
+    "kind": "ce",
+    "dice_weight": 0.3,
+    "focal_gamma": 2.0
+  },
+  "inference": {
+    "tile": 448,
+    "stride": 224,
+    "batch_size": 1,
+    "blend": "hann"
+  },
+  "output": {
+    "run": "D:\\App\\Files\\uav_segmentation_3050\\runs\\restart_20260915_120100_012816\\E1_sampling02",
+    "predictions": "D:\\App\\Files\\uav_segmentation_3050\\outputs\\restart_20260915_120100_012816\\E1_sampling02\\png",
+    "submission": "D:\\App\\Files\\uav_segmentation_3050\\outputs\\restart_20260915_120100_012816\\E1_sampling02\\submission.zip"
+  },
+  "previous_project": "D:\\App\\Files\\uav_segmentation_3050_v2",
+  "validation": {
+    "domain_enabled": true,
+    "domain_split": "artifacts/domain_split.json",
+    "clusters": 5,
+    "holdout_cluster": 0,
+    "select": "domain"
+  },
+  "augmentation": {
+    "rotate90": true,
+    "domain": true,
+    "blur": false,
+    "noise": false
+  }
+}

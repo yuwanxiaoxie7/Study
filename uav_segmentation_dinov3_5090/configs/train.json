@@ -1,0 +1,12 @@
+{
+  "seed":2026,"data_root":"","images":"train/train/images","masks":"train/train/masks","test_zip":"test_1.zip",
+  "backbone":"dinov3_vitl16","weight_source":"sat493m","pretrained":"",
+  "decoder":"upernet_lite","width":128,"feature_layers":[5,11,17,23],
+  "lora_rank":8,"lora_alpha":16,"lora_last_blocks":4,"activation_checkpoint":true,
+  "crop":448,"tile":448,"stride":224,"resize_choices":[512,768,1024],"sampling_probability":0.2,
+  "batch_size":2,"accumulation":4,"workers":4,"epochs":30,
+  "lr":0.0002,"backbone_lr_multiplier":0.1,"weight_decay":0.01,"warmup_fraction":0.05,"min_lr_ratio":0.01,"grad_clip":1.0,
+  "boundary_weight":0.05,"lovasz_weight":0.1,"precision":"bf16","tta":"none",
+  "validate_every_epochs":2,"train_miou_every_updates":50,"checkpoint_every_updates":100,
+  "benchmark_updates":5,"max_estimated_hours":18,"max_peak_gib":28
+}

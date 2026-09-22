@@ -1,0 +1,4 @@
+{
+  "extends": "train.json",
+  "lovasz_weight": 0.0
+}

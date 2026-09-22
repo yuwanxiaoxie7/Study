@@ -1,0 +1,1 @@
+{"extends":"train.json","crop":512,"tile":512,"stride":256}

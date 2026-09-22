@@ -1,0 +1,8 @@
+{
+  "images": 500,
+  "errors": [],
+  "sha256": "d597ad52f8ca92114152ebcc88e3875c9dd94494c3943830643045f282212bd6",
+  "format": "8-bit grayscale PNG, 1024x1024, IDs 0..8",
+  "checkpoint_sha256": "b641d94455757fe9296cc8e748076ded12d13402a9da6e4c2c08bc55353a9333",
+  "single_model": true
+}

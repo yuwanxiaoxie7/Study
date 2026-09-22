@@ -1,0 +1,6 @@
+{
+  "extends": "train.json",
+  "backbone": "dinov2_vits14",
+  "decoder": "legacy",
+  "pretrained": "pretrained/dinov2_vits14_pretrain.pth"
+}

@@ -1,0 +1,18 @@
+{
+  "vendor/dinov2/dinov2/__init__.py": "1e23e03ffdaf2605636f73e550a6619359ebae271f488437bd6ef068b75c114f",
+  "vendor/dinov2/dinov2/hub/__init__.py": "4cb84429008d894db3edcce826656c5bab6474bf57fb7852d15cb1768492f1f0",
+  "vendor/dinov2/dinov2/hub/backbones.py": "2c949806990f08cbdd7416456c251839667f8df8d3001e632affbe2c466be26e",
+  "vendor/dinov2/dinov2/hub/utils.py": "d584948e16159c551be00c7e53c9495a77bd4e50c0166bb42be2d0b1d82e503a",
+  "vendor/dinov2/dinov2/layers/__init__.py": "380238900f0a60770e4102ac2849e72b17776f5b12754a600429a3567ef26202",
+  "vendor/dinov2/dinov2/layers/attention.py": "aa021503d047191839447ceb7e52ce47a27a81fb3200e0dd3b40b51be301f8c9",
+  "vendor/dinov2/dinov2/layers/block.py": "f395ba19dd990213ef4bcf22431463aab59321dc74cc10256c5f10b47690d209",
+  "vendor/dinov2/dinov2/layers/dino_head.py": "21a3c10983280abab3103274e690531a6b97f5145d9d909f5b68863c9b972e84",
+  "vendor/dinov2/dinov2/layers/drop_path.py": "0e992756228930464d447ea1ab9337e463c8b2e6b265aef0639252d592bf2fef",
+  "vendor/dinov2/dinov2/layers/layer_scale.py": "29ac5aee9fcafaf59cfe9f97d6306cf35abfcfeb67333027de297ea908070562",
+  "vendor/dinov2/dinov2/layers/mlp.py": "4253b84f60dbd82696d1c4868517ae6f992c3ddec37b0168061679bec203cd59",
+  "vendor/dinov2/dinov2/layers/patch_embed.py": "087f6d61b517ca6768817885dbcb4dcef7bf48540630f1e819784f6fc666d234",
+  "vendor/dinov2/dinov2/layers/swiglu_ffn.py": "98a8679ab3557368e75280cd69be03f7c05726f5ec94d99646f5f31c96faf8c4",
+  "vendor/dinov2/dinov2/models/__init__.py": "dc41aeee6c18dd61fc0686331b8fd6a3289d676a51bfd707bed6682fae5cc6c6",
+  "vendor/dinov2/dinov2/models/vision_transformer.py": "df4834fc4208bfa0ae15e306364271dc984d613684bbdcbada8fd88c1556110f",
+  "vendor/dinov2/LICENSE": "4b63d54afaae8f96b7b3baeb94d902bb50e4f17e3d0fc6cb450bef56cb769616"
+}

@@ -1,0 +1,4 @@
+{
+  "extends": "train.json",
+  "decoder": "legacy"
+}

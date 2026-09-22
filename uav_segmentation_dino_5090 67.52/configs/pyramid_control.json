@@ -1,0 +1,5 @@
+{
+  "extends": "train.json",
+  "boundary_weight": 0.0,
+  "lovasz_weight": 0.0
+}

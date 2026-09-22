@@ -1,0 +1,8 @@
+{
+  "extends": "train.json",
+  "crop": 392,
+  "width": 64,
+  "boundary_weight": 0.0,
+  "lovasz_weight": 0.0,
+  "max_peak_gib": 28
+}
