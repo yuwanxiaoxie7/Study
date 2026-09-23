@@ -1,0 +1,17 @@
+{
+  "seed": 2026, "backbone": "b4", "head": "mlp", "offset": false,
+  "head_width": 256, "head_norm": "gn", "head_pool": 1,
+  "checkpoint_blocks": true, "data_root": "", "test_zip": "test_2.zip",
+  "expected_test_count": 1300, "image_size": 1024,
+  "images": "train/train/images", "masks": "train/train/masks",
+  "crop": 512, "resize_choices": [768, 1024, 1280],
+  "sampling_probability": 0.0, "class_weighting": false,
+  "batch_size": 1, "accumulation": 8, "workers": 4,
+  "epochs": 30, "backbone_lr": 0.00006, "head_lr": 0.0006,
+  "weight_decay": 0.01, "warmup_fraction": 0.05, "grad_clip": 1.0,
+  "dice_weight": 0.0, "lovasz_weight": 0.0,
+  "precision": "auto", "validate_every": 2, "save_every": 100, "log_every": 20,
+  "inference": "slide", "tile": 512, "stride": 256,
+  "benchmark_updates": 3, "max_hours": 18, "max_peak_gib": 28,
+  "visualizations": 6, "stop_after_updates": null
+}

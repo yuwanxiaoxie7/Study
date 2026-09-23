@@ -1,0 +1,104 @@
+{
+  "description": "Previously completed local checks; no new model execution during documentation/package completion.",
+  "server_5090_tested": false,
+  "full_training_run": false,
+  "official_score": null,
+  "syntax_files_checked": 13,
+  "unit_tests": {
+    "tests": 7,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "data": "synthetic CPU only",
+    "full_competition_training": false
+  },
+  "pretrained_models": {
+    "environment": {
+      "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Jun 11 2026, 15:12:53) [MSC v.1942 64 bit (AMD64)]",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "torch": "2.5.1",
+      "transformers": "4.56.2",
+      "cuda": "12.4",
+      "numpy": "2.0.1",
+      "pillow": "11.3.0",
+      "gpu": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "gpu_total_gib": 3.99951171875
+    },
+    "models": [
+      {
+        "backbone": "b4",
+        "head": "offset",
+        "official_weight_sha256": "1cddf0f9ed0b7f1639a8f5e339c177673685df3e2e3c9575a649eb15bcf68a55",
+        "loading": {
+          "backbone_keys": 914,
+          "coverage": 1.0,
+          "excluded": [
+            "classifier.bias",
+            "classifier.weight"
+          ]
+        },
+        "parameters": 61502672,
+        "input": [
+          1,
+          3,
+          64,
+          64
+        ],
+        "device": "cpu",
+        "forward_backward_finite": true,
+        "seconds": 1.5789999999979045,
+        "note": "Synthetic 64x64 smoke only, no optimizer update and no competition training."
+      },
+      {
+        "backbone": "b5",
+        "head": "offset",
+        "official_weight_sha256": "a389c0a604458fa205446fd08a2c01b74e6591a5da3e77de668c6ca5cbf75356",
+        "loading": {
+          "backbone_keys": 1156,
+          "coverage": 1.0,
+          "excluded": [
+            "classifier.bias",
+            "classifier.weight"
+          ]
+        },
+        "parameters": 82102992,
+        "input": [
+          1,
+          3,
+          64,
+          64
+        ],
+        "device": "cpu",
+        "forward_backward_finite": true,
+        "seconds": 1.7189999999973224,
+        "note": "Synthetic 64x64 smoke only, no optimizer update and no competition training."
+      }
+    ],
+    "passed": true
+  },
+  "data_check": {
+    "passed": true,
+    "pretrained_forward": true,
+    "identity_sha256": "2b5c26594e05d7842ad22e4d91effd74862c56e399cb7176cfb745ab65c2e99a",
+    "gpu_measured": false,
+    "training_budget_pass": false,
+    "full_training_started": false
+  },
+  "audit_summary": {
+    "train": 5178,
+    "val": 1049,
+    "domain_val": 769,
+    "test_count": 1300,
+    "test_sha256": "c8784dba28f19b86e7043bced92e42f98b346ae3f3ea13326f51ef6af295b65a",
+    "test_names_sha256": "6e73251f9e4caec32ef3f456640aa7b2f41a85b738f193bb1c760f76706914fb",
+    "split_sha256": "ead51057f64f0f677de554ab6356c8ad6180be7d806c81f72f653b26db9bf7d3",
+    "manifest_sha256": "0c650a5b98af5e40b2a3d7dcf90ff01a45f7f1f637791d40ca0fd655c17bdba1"
+  },
+  "exact_duplicate_groups": 0,
+  "cross_split_exact_duplicate_groups": 0,
+  "notes": [
+    "CPU structural success is not GPU budget approval.",
+    "Historical checks preceded final documentation and minor selection/reporting edits; no claim of full server integration verification.",
+    "Continuous versus resumed training equality was tested with a small synthetic CPU model."
+  ]
+}

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.cache/
+weights/
+runs/
+checks/
+dist/
+*.partial*
