@@ -1,5 +1,23 @@
 # SegFormer B4/B5 复赛运行手册
 
+## 直接生成复赛提交包：只跑 B4 + OffSeg
+
+在服务器工程目录执行：
+
+```bash
+bash run_test2.sh --data-root '/你的比赛数据目录'
+```
+
+此入口固定使用b4_offset配置，默认runs/b4_offset，不运行B5或其他实验。依次安装环境、检查数据/权重、GPU测速、训练和验证、预测test_2、打包。已有last.pt自动恢复；已有completed.json和best.pt直接预测；失败时停止并保留日志。
+
+最终提交文件：runs/b4_offset/submission_test2/submission_test2.zip。需要服务器真实完成训练/预测后才会产生，代码上传ZIP不是比赛结果。
+
+仅用已有best.pt预测可追加 --predict-only；只检查追加 --check-only；仅查看计划命令追加 --dry-run（不安装、不训练、不测速）。更换运行目录用 --run，仍固定B4 offset。只有best.pt而缺少last.pt和完成标记时，必须显式选择 --predict-only，避免覆盖。
+
+断线继续：先执行tmux new -s segformer-test2，再执行上述命令；Ctrl+B再按D退出会话。重新连接用tmux attach -t segformer-test2。进程真正退出后，重跑同一条命令自动按断点续作。
+
+下文是通用入口说明；使用run_test2.sh时无需逐个执行其他模型实验。
+
 独立工程，从公开 ImageNet MiT 权重开始，不需要旧 best.pt。建议先跑 B4 基线，再跑 B4 offset 对照，最后考虑 B5。论文与实现差异见 RESEARCH.md、THIRD_PARTY.md。本地检查记录见 LOCAL_VERIFICATION.json；5090 显存、速度、完整训练及比赛成绩均未实测。
 
 ## 上传与数据

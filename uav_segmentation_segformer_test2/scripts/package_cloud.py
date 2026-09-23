@@ -11,7 +11,7 @@ def main():
     folders = ('aic','configs','scripts','artifacts','third_party')
     files = [p for directory in folders for p in (ROOT/directory).rglob('*')
              if p.is_file() and p.suffix in ('.py','.json','.md','.txt') and '__pycache__' not in p.parts]
-    files += [ROOT/name for name in ('pipeline.py','requirements.txt','setup.sh','run_all.sh','.gitignore',
+    files += [ROOT/name for name in ('pipeline.py','requirements.txt','setup.sh','run_all.sh','run_test2.sh','.gitignore',
               'README.md','RESEARCH.md','THIRD_PARTY.md','LOCAL_VERIFICATION.json') if (ROOT/name).is_file()]
     files = sorted(set(files))
     hashes = {p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
